@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra mail</title>
+</head>
+<body>
+<script>
+
+    function mail(str) {
+
+        let regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(.[A-Za-z0-9]+)$/;
+
+        if (regexp.test(str)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let mailTest = "abc@gmail.com";
+    console.log(mail(mailTest));
+    mailTest = "@#abc@gmail.com";
+    console.log(mail(mailTest));
+
+</script>
+</body>
+</html>
